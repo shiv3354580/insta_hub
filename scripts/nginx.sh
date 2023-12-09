@@ -10,4 +10,3 @@ sudo ln -s /etc/nginx/sites-available/ /etc/nginx/sites-enabled/
 #sudo nginx -t
 sudo gpasswd -a www-data ubuntu
 sudo systemctl restart nginx
-
