@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["65.2.170.204"]/' /home/ubuntu/insta_hub/insta_hub/settings.py
+sed -i 's/\[]/\["3.110.121.131"]/' /home/ubuntu/insta_hub/insta_hub/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     
