@@ -3,5 +3,5 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('', views.insta_login),
+    path('run', views.insta_login),
 ]
