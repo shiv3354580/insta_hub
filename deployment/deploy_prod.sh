@@ -1,5 +1,5 @@
-ssh root@3.110.121.131 <<EOF
-  cd testing
+ssh root@3.109.210.67 <<EOF
+  cd insta_hub
   git pull 
   source env/bin/activate
   ./manage.py migrate
