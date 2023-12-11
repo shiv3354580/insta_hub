@@ -17,10 +17,11 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 import random
 from .driver import undetectable_driver
-driver = undetectable_driver()
+
 # Create your views here.
-def insta_login(reuqest):
+def insta_login(request):
     url = "https://www.instagram.com/"
+    driver = undetectable_driver()
     driver.get(url)
-    return HttpResponse('instagram opened !!')
+    return render(request,'index.html')
     
