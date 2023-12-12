@@ -20,8 +20,5 @@ from .driver import undetectable_driver
 
 # Create your views here.
 def insta_login(request):
-    url = "https://www.instagram.com/"
-    driver = undetectable_driver()
-    driver.get(url)
     return render(request,'index.html')
     
