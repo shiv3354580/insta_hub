@@ -53,21 +53,51 @@
 from selenium import webdriver
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
-# Replace with the path to your WebDriver (e.g., chromedriver, geckodriver)
+chrome_options.add_argument("--incognito")
+# # Replace with the path to your WebDriver (e.g., chromedriver, geckodriver)
 driver = webdriver.Chrome(options=chrome_options)
-
-# Replace with the URL of the website you want to access
+# https://www.instagram.com/hynmkl/ search like this of usernames 
+# # Replace with the URL of the website you want to access
 website_url = 'https://www.instagram.com/'
 
-# Replace 'sessionId' with your actual session ID
-session_id = '53553760579%3AK4TqQ7ljnANtpP%3A25%3AAYdlmJeESR1ZTr1Wi_PQ0DJIOfapC8fLhxSunlhv2A'
+# # Replace 'sessionId' with your actual session ID
+# # session_id = '53553760579%3AK4TqQ7ljnANtpP%3A25%3AAYdlmJeESR1ZTr1Wi_PQ0DJIOfapC8fLhxSunlhv2A'
+# Session = ''
 
-# Visit the website
+# # Visit the website
 driver.get(website_url)
 
-# Set the session ID in the cookie
+# # Set the session ID in the cookie
+# ds_user_id	53553760579
+driver.add_cookie({'name': 'sessionid', 'value': '53553760579%3AK4TqQ7ljnANtpP%3A25%3AAYcRxQMsZMeHPaJpEgSqvtnvDYI6NTNb4AOKMgCaRQ'})
 
-driver.add_cookie({'name': 'sessionid', 'value': session_id})
-
-# Refresh the page to log in using the session ID
+# # Refresh the page to log in using the session ID
 driver.refresh()
+                    
+
+
+
+# from selenium import webdriver
+# from selenium.webdriver import FirefoxProfile
+# from selenium.webdriver.firefox import options
+
+# profilepath =r"C:\Users\hp\AppData\Roaming\Mozilla\Firefox\Profiles\prd91egc.default-release-1688743553212"
+# options = webdriver.FirefoxOptions()
+# options.set_capability("moz:firefoxOptions", {
+#     "args":["-profile", profilepath]
+# })
+# driver = webdriver.Firefox(options=options)
+
+# # Use the driver as needed
+# driver.get('https://www.instagram.com/')
+# # Don't forget to close the driver when done
+# # driver.quit()
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+from selenium.webdriver.firefox.service import Service as FirefoxService
+
+
+import requests
+response = requests.get('http://www.instagram.com')
+print(response.cookies)
